@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace EmployeeManagement.Models
 {
@@ -8,7 +9,9 @@ namespace EmployeeManagement.Models
         public int? Idsucursal { get; set; }
         public int? Idempleado { get; set; }
 
+        [JsonIgnore]
         public virtual Empleado? IdempleadoNavigation { get; set; }
+        [JsonIgnore]
         public virtual Sucursal? IdsucursalNavigation { get; set; }
     }
 }

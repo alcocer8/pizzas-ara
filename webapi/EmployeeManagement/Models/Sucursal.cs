@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace EmployeeManagement.Models
 {
@@ -20,10 +21,13 @@ namespace EmployeeManagement.Models
         public int? Idmunicipio { get; set; }
         public int? Idciudad { get; set; }
         public int? Idestado { get; set; }
-
+        [JsonIgnore]
         public virtual Ciudad? IdciudadNavigation { get; set; }
+        [JsonIgnore]
         public virtual Estado? IdestadoNavigation { get; set; }
+        [JsonIgnore]
         public virtual Municipio? IdmunicipioNavigation { get; set; }
+        [JsonIgnore]
         public virtual ICollection<Orden> Ordens { get; set; }
     }
 }
