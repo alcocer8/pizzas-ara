@@ -1,13 +1,15 @@
-using pizzitas_web.Models.entities;
-using pizzitas_web.Services.impl;
-using pizzitas_web.Services;
-using pizzitas_web.Repositories;
-using pizzitas_web.Repositories.impl;
+using ProductManagement.Models.entities;
+using ProductManagement.Service.impl;
+using ProductManagement.Service;
+using ProductManagement.Repository;
+using ProductManagement.Repository.impl;
 using Microsoft.EntityFrameworkCore;
 
+
 var builder = WebApplication.CreateBuilder(args);
-// Add DB Context
-builder.Services.AddDbContext<pizzitasContext>( options => {
+
+// Add services to the container.
+builder.Services.AddDbContext<PizzitasContext>( options => {
     options.UseNpgsql(builder.Configuration.GetConnectionString("PizzitasDBConnection"));
 });
 
@@ -15,7 +17,7 @@ builder.Services.AddDbContext<pizzitasContext>( options => {
 builder.Services.AddScoped<IProductoService, ProductoService>();
 builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
 
-// Add services to the container.
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

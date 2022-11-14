@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "Ed5sos4ILYzlaRwYjHFIrgM06xqUxZtSYzPKMx5VM6o=",
-  "Source": "pizzitas-web",
-  "BasePath": "_content/pizzitas-web",
+  "Hash": "FDp6xwoNfOX+RNLQJvm6/OAaYsvTR0JMSDNzPWoWRRA=",
+  "Source": "ProductManagement",
+  "BasePath": "_content/ProductManagement",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
