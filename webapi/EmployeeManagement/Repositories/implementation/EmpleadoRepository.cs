@@ -70,6 +70,7 @@ namespace EmployeeManagement.Repositories.implementation
                 return false;
 
             this._context.Empleados.Remove(result);
+            this._context.SaveChanges();
             return true;
         }
     }
