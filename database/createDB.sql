@@ -27,6 +27,8 @@ CREATE TABLE Cargo (
 	PRIMARY KEY (idCargo)
 );
 
+
+
 --drop table cliente;
 /* Relaciones */
 CREATE TABLE Cliente(

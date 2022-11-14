@@ -42,7 +42,7 @@ namespace EmployeeManagement.Controllers
         [ProducesResponseType (StatusCodes.Status200OK)]
         [ProducesResponseType (StatusCodes.Status400BadRequest)]
         [ProducesResponseType (StatusCodes.Status500InternalServerError)]
-        public bool UpdateEmployee(int idEmployee, [FromBody] Empleado empleado)
+        public bool UpdateEmployee(int idEmployee, Empleado empleado)
         {
             return this._empleadoService.UpdateEmpleado(idEmployee, empleado);
         }
@@ -51,7 +51,7 @@ namespace EmployeeManagement.Controllers
         [ProducesResponseType (StatusCodes.Status200OK)]
         [ProducesResponseType (StatusCodes.Status400BadRequest)]
         [ProducesResponseType (StatusCodes.Status500InternalServerError)]
-        public IActionResult InsertEmployee([FromBody] Empleado empleado)
+        public IActionResult InsertEmployee(Empleado empleado)
         {
             try
             {

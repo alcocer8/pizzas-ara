@@ -1,20 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace pizzitas_web.Models.entities
+namespace ProductManagement.Models.entities;
+
+public partial class Estado
 {
-    public partial class Estado
-    {
-        public Estado()
-        {
-            Clientes = new HashSet<Cliente>();
-            Sucursals = new HashSet<Sucursal>();
-        }
+    public int Idestado { get; set; }
 
-        public int Idestado { get; set; }
-        public string? Nombreestado { get; set; }
+    public string? Nombreestado { get; set; }
 
-        public virtual ICollection<Cliente> Clientes { get; set; }
-        public virtual ICollection<Sucursal> Sucursals { get; set; }
-    }
+    public virtual ICollection<Cliente> Clientes { get; } = new List<Cliente>();
+
+    public virtual ICollection<Sucursal> Sucursals { get; } = new List<Sucursal>();
 }
