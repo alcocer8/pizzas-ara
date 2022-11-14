@@ -71,5 +71,15 @@ namespace EmployeeManagement.Controllers
                 throw;
             }
         }
+
+        [HttpDelete]
+        [ProducesResponseType (StatusCodes.Status200OK)]
+        [ProducesResponseType (StatusCodes.Status500InternalServerError)]
+        public bool DeleteEmployee(int employeeId) 
+        {
+            var isDeleted = this._empleadoService.DeleteEmpleado(employeeId);
+
+            return isDeleted;
+        }
     }
 }
