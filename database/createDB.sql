@@ -27,6 +27,8 @@ CREATE TABLE Cargo (
 	PRIMARY KEY (idCargo)
 );
 
+
+
 --drop table cliente;
 /* Relaciones */
 CREATE TABLE Cliente(
@@ -95,7 +97,7 @@ CREATE TABLE SucursalEmpleado (
 	idSucursal INT,
 	idEmpleado INT,
 	FOREIGN KEY (idSucursal) REFERENCES Sucursal (IdSucursal),
-	FOREIGN KEY (idEmpleado) REFERENCES Empleado (IdEmpleado)
+	FOREIGN KEY (idEmpleado) REFERENCES Empleado (IdEmpleado) ON DELETE CASCADE
 );
 
 --drop table Orden;

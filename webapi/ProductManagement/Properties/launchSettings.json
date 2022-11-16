@@ -4,17 +4,17 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:29782",
-      "sslPort": 44377
+      "applicationUrl": "http://localhost:15518",
+      "sslPort": 44390
     }
   },
   "profiles": {
-    "pizzitas_web": {
+    "ProductManagement": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
-      "applicationUrl": "https://localhost:7181;http://localhost:5081",
+      "applicationUrl": "https://localhost:7014;http://localhost:5176",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

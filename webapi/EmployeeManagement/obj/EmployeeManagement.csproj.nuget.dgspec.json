@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Eduardo\\Documents\\Escuela UV\\ALGORITMOS\\C#\\pizzas-ara\\webapi\\EmployeeManagement\\EmployeeManagement.csproj": {}
+    "/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/EmployeeManagement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Eduardo\\Documents\\Escuela UV\\ALGORITMOS\\C#\\pizzas-ara\\webapi\\EmployeeManagement\\EmployeeManagement.csproj": {
+    "/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/EmployeeManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eduardo\\Documents\\Escuela UV\\ALGORITMOS\\C#\\pizzas-ara\\webapi\\EmployeeManagement\\EmployeeManagement.csproj",
+        "projectUniqueName": "/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/EmployeeManagement.csproj",
         "projectName": "EmployeeManagement",
-        "projectPath": "C:\\Users\\Eduardo\\Documents\\Escuela UV\\ALGORITMOS\\C#\\pizzas-ara\\webapi\\EmployeeManagement\\EmployeeManagement.csproj",
-        "packagesPath": "C:\\Users\\Eduardo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eduardo\\Documents\\Escuela UV\\ALGORITMOS\\C#\\pizzas-ara\\webapi\\EmployeeManagement\\obj\\",
+        "projectPath": "/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/EmployeeManagement.csproj",
+        "packagesPath": "/home/lorenzo/.nuget/packages/",
+        "outputPath": "/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Eduardo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/lorenzo/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -65,8 +63,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -78,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/dotnet6-6.0.110/sdk/6.0.110/RuntimeIdentifierGraph.json"
         }
       }
     }
