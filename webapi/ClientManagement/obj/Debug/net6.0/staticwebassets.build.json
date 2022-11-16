@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "a8nvxsQwVxbj0OVaE5o2tGlj/5e+7V415vLxsvP81rM=",
+  "Source": "ClientManagement",
+  "BasePath": "_content/ClientManagement",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
