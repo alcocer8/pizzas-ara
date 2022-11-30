@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace ProductManagement.Models.entities;
+namespace StoreManagement.Models.entities;
 
 public partial class PizzitasContext : DbContext
 {

@@ -3,8 +3,8 @@ using EmployeeManagement.Services;
 using EmployeeManagement.Services.implementation;
 using EmployeeManagement.Repositories;
 using EmployeeManagement.Repositories.implementation;
-using System.Text;
 using Microsoft.EntityFrameworkCore;
+using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.OpenApi.Models;
 

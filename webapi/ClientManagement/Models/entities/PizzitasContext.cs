@@ -40,8 +40,8 @@ public partial class PizzitasContext : DbContext
     public virtual DbSet<Sucursalempleado> Sucursalempleados { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-    }
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseNpgsql("server=localhost;port=5432;username=lorenzo;password=1234;database=pizzitas");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -83,6 +83,9 @@ public partial class PizzitasContext : DbContext
             entity.Property(e => e.Cp)
                 .HasMaxLength(10)
                 .HasColumnName("cp");
+            entity.Property(e => e.Email)
+                .HasMaxLength(64)
+                .HasColumnName("email");
             entity.Property(e => e.Idciudad).HasColumnName("idciudad");
             entity.Property(e => e.Idestado).HasColumnName("idestado");
             entity.Property(e => e.Idmunicipio).HasColumnName("idmunicipio");
@@ -94,6 +97,7 @@ public partial class PizzitasContext : DbContext
                 .HasColumnName("name");
             entity.Property(e => e.Nexterior).HasColumnName("nexterior");
             entity.Property(e => e.Ninterior).HasColumnName("ninterior");
+            entity.Property(e => e.Pass).HasColumnName("pass");
             entity.Property(e => e.Phone).HasColumnName("phone");
             entity.Property(e => e.Referencias).HasColumnName("referencias");
 
@@ -118,7 +122,7 @@ public partial class PizzitasContext : DbContext
 
             entity.Property(e => e.Idcondicion).HasColumnName("idcondicion");
             entity.Property(e => e.Name)
-                .HasMaxLength(64)
+                .HasMaxLength(32)
                 .HasColumnName("name");
         });
 
@@ -159,6 +163,10 @@ public partial class PizzitasContext : DbContext
             entity.Property(e => e.Name)
                 .HasMaxLength(64)
                 .HasColumnName("name");
+            entity.Property(e => e.Pass).HasColumnName("pass");
+            entity.Property(e => e.Username)
+                .HasMaxLength(32)
+                .HasColumnName("username");
 
             entity.HasOne(d => d.IdcargoNavigation).WithMany(p => p.Empleados)
                 .HasForeignKey(d => d.Idcargo)
@@ -197,7 +205,6 @@ public partial class PizzitasContext : DbContext
                 .HasColumnName("fecha");
             entity.Property(e => e.Idcliente).HasColumnName("idcliente");
             entity.Property(e => e.Idcondicion).HasColumnName("idcondicion");
-            entity.Property(e => e.Idestado).HasColumnName("idestado");
             entity.Property(e => e.Idsucursal).HasColumnName("idsucursal");
 
             entity.HasOne(d => d.IdclienteNavigation).WithMany(p => p.Ordens)
@@ -282,6 +289,7 @@ public partial class PizzitasContext : DbContext
 
             entity.HasOne(d => d.IdempleadoNavigation).WithMany(p => p.Sucursalempleados)
                 .HasForeignKey(d => d.Idempleado)
+                .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("sucursalempleado_idempleado_fkey");
 
             entity.HasOne(d => d.IdsucursalNavigation).WithMany(p => p.Sucursalempleados)

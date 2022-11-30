@@ -13,6 +13,10 @@ public partial class Cliente
 
     public string? Phone { get; set; }
 
+    public string? Email { get; set; }
+
+    public string? Pass { get; set; }
+
     public string? Calle { get; set; }
 
     public string? Colonia { get; set; }

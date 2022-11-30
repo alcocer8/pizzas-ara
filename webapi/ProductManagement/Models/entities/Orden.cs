@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ProductManagement.Models.entities;
+namespace StoreManagement.Models.entities;
 
 public partial class Orden
 {

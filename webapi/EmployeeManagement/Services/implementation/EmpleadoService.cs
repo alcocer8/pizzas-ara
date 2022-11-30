@@ -1,10 +1,10 @@
 using Microsoft.Extensions.Options;
-using System.Security.Claims;
 using EmployeeManagement.Models.entities;
 using EmployeeManagement.Repositories;
 using EmployeeManagement.Models.JWT;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 
 
 namespace EmployeeManagement.Services.implementation

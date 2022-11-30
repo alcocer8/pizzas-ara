@@ -1,7 +1,9 @@
 using ClientManagement.Models.entities;
 using ClientManagement.Service;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using System.Text.Json;
+
 
 namespace ClientManagement.Controllers
 {
@@ -18,6 +20,17 @@ namespace ClientManagement.Controllers
         ){
             this._clienteService = clienteService;
             this._logger = logger;
+        }
+
+        [HttpPost ("authenticate")]
+        [AllowAnonymous]
+        [ProducesResponseType (StatusCodes.Status200OK, Type = typeof (Cliente))]
+        [ProducesResponseType (StatusCodes.Status500InternalServerError)]
+        public IActionResult Authenticate([FromBody] Login login)
+        {
+            
+            var result = this._clienteService.Authenticate (login.Username, login.Password);
+            return Ok (result);
         }
 
         [HttpPost]

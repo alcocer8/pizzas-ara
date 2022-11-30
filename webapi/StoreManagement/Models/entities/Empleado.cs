@@ -13,6 +13,10 @@ public partial class Empleado
 
     public string? Celular { get; set; }
 
+    public string? Username { get; set; }
+
+    public string? Pass { get; set; }
+
     public int? Idcargo { get; set; }
 
     public virtual Cargo? IdcargoNavigation { get; set; }

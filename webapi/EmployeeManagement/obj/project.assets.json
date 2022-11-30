@@ -1806,11 +1806,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/lorenzo/Documentos/C_sharp/EmployeeManagement/EmployeeManagement.csproj",
+      "projectUniqueName": "/home/lorenzo/Documentos/C_sharp/pizzas-ara/webapi/EmployeeManagement/EmployeeManagement.csproj",
       "projectName": "EmployeeManagement",
-      "projectPath": "/home/lorenzo/Documentos/C_sharp/EmployeeManagement/EmployeeManagement.csproj",
+      "projectPath": "/home/lorenzo/Documentos/C_sharp/pizzas-ara/webapi/EmployeeManagement/EmployeeManagement.csproj",
       "packagesPath": "/home/lorenzo/.nuget/packages/",
-      "outputPath": "/home/lorenzo/Documentos/C_sharp/EmployeeManagement/obj/",
+      "outputPath": "/home/lorenzo/Documentos/C_sharp/pizzas-ara/webapi/EmployeeManagement/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/lorenzo/.nuget/NuGet/NuGet.Config"

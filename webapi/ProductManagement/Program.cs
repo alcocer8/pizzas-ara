@@ -1,4 +1,4 @@
-using ProductManagement.Models.entities;
+using StoreManagement.Models.entities;
 using ProductManagement.Service.impl;
 using ProductManagement.Service;
 using ProductManagement.Repository;
