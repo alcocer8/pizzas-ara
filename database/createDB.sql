@@ -31,11 +31,15 @@ CREATE TABLE Cargo (
 
 --drop table cliente;
 /* Relaciones */
+
+
 CREATE TABLE Cliente(
 	idCliente SERIAL,
 	name VARCHAR(64),
 	lastName VARCHAR(64),
 	phone TEXT,
+	email VARCHAR(64),
+	pass TEXT,
 	calle VARCHAR(256) ,
 	colonia VARCHAR(256),
 	nInterior  SMALLINT,
@@ -58,6 +62,8 @@ CREATE TABLE Empleado (
 	name VARCHAR(64),
 	lastName VARCHAR(64),
 	celular VARCHAR(16),
+	username VARCHAR(32),
+	pass TEXT,
 	idCargo INT,
 	PRIMARY KEY (idEmpleado),
 	FOREIGN KEY (idCargo) REFERENCES Cargo (idCargo)
@@ -93,11 +99,19 @@ CREATE TABLE Sucursal (
 
 /* Relación 1:N entre sucursal y empleados */
 --drop table SucursalEmpleado;
-CREATE TABLE SucursalEmpleado (	
+CREATE TABLE SucursalEmpleado (
+	idSucursalEmpleado SERIAL,
 	idSucursal INT,
 	idEmpleado INT,
+	PRIMARY KEY (idSucursalEmpleado),
 	FOREIGN KEY (idSucursal) REFERENCES Sucursal (IdSucursal),
 	FOREIGN KEY (idEmpleado) REFERENCES Empleado (IdEmpleado) ON DELETE CASCADE
+);
+
+CREATE TABLE Condicion(
+	idCondicion SERIAL,
+	name VARCHAR(32),
+	PRIMARY KEY (idCondicion)
 );
 
 --drop table Orden;
@@ -105,10 +119,12 @@ CREATE TABLE Orden (
 	idOrden SERIAL,
 	idCliente INT,
 	idSucursal INT,
+	idCondicion INT,
 	fecha TIMESTAMP,
 	PRIMARY KEY (IdOrden),
 	FOREIGN KEY (idCliente) REFERENCES Cliente(idCliente),
-	FOREIGN KEY (idSucursal) REFERENCES Sucursal (idSucursal)
+	FOREIGN KEY (idSucursal) REFERENCES Sucursal (idSucursal),
+	FOREIGN KEY (idCondicion) REFERENCES Condicion (idCondicion)
 );
 
 --drop table DetallesOrden;
@@ -117,6 +133,7 @@ CREATE TABLE DetallesOrden (
 	idOrden INT,
 	idProducto INT,
 	quantity INT,
+	PRIMARY KEY (idDetalles),
 	FOREIGN KEY (idOrden) REFERENCES Orden (idOrden),
 	FOREIGN KEY (idProducto) REFERENCES Producto (idProducto)
 );

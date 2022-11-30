@@ -1,12 +1,12 @@
-using EmployeeManagement.Models;
+using EmployeeManagement.Models.entities;
 
 namespace EmployeeManagement.Repositories.implementation
 {
     public class EmpleadoRepository : IEmpleadoRepository
     {
-        private readonly pizzitasContext _context;
 
-        public EmpleadoRepository(pizzitasContext context)
+        private readonly PizzitasContext _context;
+        public EmpleadoRepository(PizzitasContext context)
         {
             this._context = context;
         }

@@ -1,4 +1,4 @@
-using EmployeeManagement.Models;
+using EmployeeManagement.Models.entities;
 
 namespace EmployeeManagement.Repositories
 {

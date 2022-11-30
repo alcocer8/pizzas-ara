@@ -1,105 +1,57 @@
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/bin/Debug/net6.0/appsettings.Development.json
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/bin/Debug/net6.0/appsettings.json
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/bin/Debug/net6.0/EmployeeManagement.exe
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/bin/Debug/net6.0/EmployeeManagement.deps.json
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/bin/Debug/net6.0/EmployeeManagement.runtimeconfig.json
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/bin/Debug/net6.0/EmployeeManagement.dll
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/bin/Debug/net6.0/EmployeeManagement.pdb
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.dll
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Relational.dll
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/bin/Debug/net6.0/Microsoft.Extensions.Caching.Memory.dll
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/bin/Debug/net6.0/Microsoft.OpenApi.dll
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/bin/Debug/net6.0/Npgsql.dll
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/bin/Debug/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/bin/Debug/net6.0/Swashbuckle.AspNetCore.Swagger.dll
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.csproj.AssemblyReference.cache
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.GeneratedMSBuildEditorConfig.editorconfig
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.AssemblyInfoInputs.cache
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.AssemblyInfo.cs
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.csproj.CoreCompileInputs.cache
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.MvcApplicationPartsAssemblyInfo.cs
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.MvcApplicationPartsAssemblyInfo.cache
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/obj/Debug/net6.0/staticwebassets.build.json
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/obj/Debug/net6.0/staticwebassets.development.json
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/obj/Debug/net6.0/scopedcss/bundle/EmployeeManagement.styles.css
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.csproj.CopyComplete
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.dll
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/obj/Debug/net6.0/refint/EmployeeManagement.dll
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.pdb
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.genruntimeconfig.cache
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/obj/Debug/net6.0/ref/EmployeeManagement.dll
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/bin/Debug/net6.0/Humanizer.dll
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/EmployeeManagement/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Design.dll
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/appsettings.Development.json
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/appsettings.json
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/EmployeeManagement.exe
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/EmployeeManagement.deps.json
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/EmployeeManagement.runtimeconfig.json
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/EmployeeManagement.dll
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/EmployeeManagement.pdb
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/Humanizer.dll
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.dll
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Design.dll
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Relational.dll
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/Microsoft.Extensions.Caching.Memory.dll
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/Microsoft.OpenApi.dll
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/Npgsql.dll
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/Swashbuckle.AspNetCore.Swagger.dll
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.csproj.AssemblyReference.cache
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.GeneratedMSBuildEditorConfig.editorconfig
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.AssemblyInfoInputs.cache
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.AssemblyInfo.cs
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.csproj.CoreCompileInputs.cache
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.MvcApplicationPartsAssemblyInfo.cs
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.MvcApplicationPartsAssemblyInfo.cache
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/obj/Debug/net6.0/staticwebassets.build.json
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/obj/Debug/net6.0/staticwebassets.development.json
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/obj/Debug/net6.0/scopedcss/bundle/EmployeeManagement.styles.css
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.csproj.CopyComplete
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.dll
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/obj/Debug/net6.0/refint/EmployeeManagement.dll
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.pdb
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.genruntimeconfig.cache
-C:/Users/Eduardo/Documents/Escuela UV/ALGORITMOS/C#/pizzas-ara/webapi/EmployeeManagement/obj/Debug/net6.0/ref/EmployeeManagement.dll
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/appsettings.Development.json
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/appsettings.json
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/EmployeeManagement
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/EmployeeManagement.deps.json
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/EmployeeManagement.runtimeconfig.json
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/EmployeeManagement.dll
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/ref/EmployeeManagement.dll
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/EmployeeManagement.pdb
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/Humanizer.dll
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.dll
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Design.dll
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Relational.dll
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/Microsoft.Extensions.Caching.Memory.dll
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/Microsoft.OpenApi.dll
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/Npgsql.dll
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/Swashbuckle.AspNetCore.Swagger.dll
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.csproj.AssemblyReference.cache
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.GeneratedMSBuildEditorConfig.editorconfig
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.AssemblyInfoInputs.cache
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.AssemblyInfo.cs
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.csproj.CoreCompileInputs.cache
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.MvcApplicationPartsAssemblyInfo.cs
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.MvcApplicationPartsAssemblyInfo.cache
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/obj/Debug/net6.0/staticwebassets.build.json
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/obj/Debug/net6.0/staticwebassets.development.json
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/obj/Debug/net6.0/scopedcss/bundle/EmployeeManagement.styles.css
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.csproj.CopyComplete
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.dll
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/obj/Debug/net6.0/ref/EmployeeManagement.dll
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.pdb
-/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.genruntimeconfig.cache
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/appsettings.Development.json
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/appsettings.json
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/EmployeeManagement
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/EmployeeManagement.deps.json
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/EmployeeManagement.runtimeconfig.json
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/EmployeeManagement.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/ref/EmployeeManagement.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/EmployeeManagement.pdb
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/Humanizer.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Design.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Relational.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/Microsoft.Extensions.Caching.Abstractions.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/Microsoft.Extensions.Caching.Memory.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/Microsoft.Extensions.DependencyInjection.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/Microsoft.Extensions.DependencyModel.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/Microsoft.Extensions.Logging.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/Microsoft.Extensions.Logging.Abstractions.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/Microsoft.Extensions.Options.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/Microsoft.Extensions.Primitives.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/Microsoft.OpenApi.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/Mono.TextTemplating.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/Npgsql.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/System.CodeDom.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/System.Text.Encodings.Web.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/System.Text.Json.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.csproj.AssemblyReference.cache
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.GeneratedMSBuildEditorConfig.editorconfig
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.AssemblyInfoInputs.cache
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.AssemblyInfo.cs
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.csproj.CoreCompileInputs.cache
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.MvcApplicationPartsAssemblyInfo.cs
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.MvcApplicationPartsAssemblyInfo.cache
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/obj/Debug/net6.0/staticwebassets.build.json
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/obj/Debug/net6.0/staticwebassets.development.json
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/obj/Debug/net6.0/scopedcss/bundle/EmployeeManagement.styles.css
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.csproj.CopyComplete
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/obj/Debug/net6.0/ref/EmployeeManagement.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.pdb
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/obj/Debug/net6.0/EmployeeManagement.genruntimeconfig.cache
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/Microsoft.IdentityModel.Abstractions.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/Microsoft.IdentityModel.Logging.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/Microsoft.IdentityModel.Tokens.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/System.IdentityModel.Tokens.Jwt.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.dll
+/home/lorenzo/Documentos/C_sharp/EmployeeManagement/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/EmployeeManagement.csproj": {}
+    "/home/lorenzo/Documentos/C_sharp/EmployeeManagement/EmployeeManagement.csproj": {}
   },
   "projects": {
-    "/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/EmployeeManagement.csproj": {
+    "/home/lorenzo/Documentos/C_sharp/EmployeeManagement/EmployeeManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/EmployeeManagement.csproj",
+        "projectUniqueName": "/home/lorenzo/Documentos/C_sharp/EmployeeManagement/EmployeeManagement.csproj",
         "projectName": "EmployeeManagement",
-        "projectPath": "/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/EmployeeManagement.csproj",
+        "projectPath": "/home/lorenzo/Documentos/C_sharp/EmployeeManagement/EmployeeManagement.csproj",
         "packagesPath": "/home/lorenzo/.nuget/packages/",
-        "outputPath": "/home/lorenzo/Documentos/C#/pizzas-ara/webapi/EmployeeManagement/obj/",
+        "outputPath": "/home/lorenzo/Documentos/C_sharp/EmployeeManagement/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/lorenzo/.nuget/NuGet/NuGet.Config"
@@ -38,23 +38,31 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[6.0.7, )"
+              "version": "[6.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.7, )"
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.25.0, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
-              "version": "[6.0.7, )"
+              "version": "[7.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.25.0, )"
             }
           },
           "imports": [
@@ -75,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/dotnet6-6.0.110/sdk/6.0.110/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.111/RuntimeIdentifierGraph.json"
         }
       }
     }

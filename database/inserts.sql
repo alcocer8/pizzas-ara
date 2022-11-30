@@ -291,7 +291,7 @@ INSERT INTO Cliente (name, lastName, phone, calle, colonia,
 nInterior, nExterior, cp, referencias, idMunicipio, idCiudad,
 idEstado)
 VALUES
-('Roberto', 'Lagunes', '2299533808', 'Su calle', 'X colonia', 4, 0,
+('Roberto', 'Lagunes', '2299533808', 'robert@correo.com', 'roberFront', 'Su calle', 'X colonia', 4, 0,
 '76849', 'Referencia', 3, 2, 1);
 
 INSERT INTO Cargo (name)
@@ -303,8 +303,8 @@ VALUES
 
 INSERT INTO Empleado (name, lastName, celular, idCargo)
 VALUES
-('Eduardo', 'Ruiz', '2291289177', 1),
-('Lorenzo', 'Alcocer', '2291304567', 1);
+('Eduardo', 'Ruiz', '2291289177', 'lorenzoPizzitas', 'lorenzoBack', 1),
+('Lorenzo', 'Alcocer', '2291304567', 'eduardoGerente', 'eduardoManager', 1);
 
 INSERT INTO Sucursal (name, calle, colonia, nInterior, nExterior, cp,
 idMunicipio, idCiudad, idEstado)

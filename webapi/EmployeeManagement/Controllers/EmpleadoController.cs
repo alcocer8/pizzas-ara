@@ -1,7 +1,9 @@
-using EmployeeManagement.Models;
+using EmployeeManagement.Models.entities;
 using EmployeeManagement.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using System.Text.Json;
+
 
 namespace EmployeeManagement.Controllers
 {
@@ -10,15 +12,30 @@ namespace EmployeeManagement.Controllers
     {
         private readonly ILogger<EmpleadoController> _logger;
         private readonly IEmpleadoService _empleadoService;
+        private readonly IConfiguration _configuration;
 
         public EmpleadoController(
             ILogger<EmpleadoController> logger,
-            IEmpleadoService empleadoService
+            IEmpleadoService empleadoService,
+            IConfiguration configuration
         ){
             this._logger = logger;
             this._empleadoService = empleadoService;
+            this._configuration = configuration;
         }
 
+        [HttpPost ("authenticate")]
+        [AllowAnonymous]
+        [ProducesResponseType (StatusCodes.Status200OK, Type = typeof (Empleado))]
+        [ProducesResponseType (StatusCodes.Status500InternalServerError)]
+        public IActionResult Authenticate([FromBody] Login login)
+        {
+            
+            var result = this._empleadoService.Authenticate (login.Username, login.Password);
+            return Ok (result);
+        }
+
+        [Authorize (Roles = "Administrador")]
         [HttpGet ("{idEmployee}")]
         [ProducesResponseType (StatusCodes.Status200OK, Type = typeof (Empleado))]
         public Empleado GetEmployee(int idEmployee)
@@ -42,7 +59,7 @@ namespace EmployeeManagement.Controllers
         [ProducesResponseType (StatusCodes.Status200OK)]
         [ProducesResponseType (StatusCodes.Status400BadRequest)]
         [ProducesResponseType (StatusCodes.Status500InternalServerError)]
-        public bool UpdateEmployee(int idEmployee, Empleado empleado)
+            public bool UpdateEmployee(int idEmployee, Empleado empleado)
         {
             return this._empleadoService.UpdateEmpleado(idEmployee, empleado);
         }
