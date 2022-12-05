@@ -8,9 +8,11 @@ import hawai from '../assets/hawai.png'
 import queso from '../assets/queso.png'
 import Footer from './footer/Footer';
 
+const host = process.env.END_POINT_ORDEN;
+const productEndpoint = process.env.END_POINT_ORDEN_ALL;
 
 function componentDidMount () {
-  let url = 
+  let url = host + productEndpoint;
 
   axios.get (url, {
       headers: {
@@ -19,7 +21,7 @@ function componentDidMount () {
           'Access-Control-Allow-Credentials': true
       }
   }).then(respose => {
-      if(respose.status == 200){
+      if(respose.status === 200){
           respose.data.forEach(p => {
             let product = {
               "idProducto" : p.id
