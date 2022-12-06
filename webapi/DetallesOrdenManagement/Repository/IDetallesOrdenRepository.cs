@@ -11,6 +11,8 @@ namespace DetallesOrdenManagement.Repository
 
         public IEnumerable<Detallesorden> GetDetallesordens();
         public bool Delete(int idDetallesOrden);
+
+        public dynamic OrdenDellado();
         
     }
 }

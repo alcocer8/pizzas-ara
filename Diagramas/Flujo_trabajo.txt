@@ -1,0 +1,29 @@
+Flujo de trabajo de un empleado
+	1. Iniciar Sesion, Si es un usuario correcto, se dirige al panel de ordenes, si no se redirge al login de empleados con un mensaje
+	2. Dentro del panel empleado debera ver todas las ordenes en curso, y sus caracteristicas, en este mismo panel se mostraran las opciones
+		de administrador si es el empleado lo es
+
+
+	Empleado General
+	1. Lectura de las ordenes actuales	
+
+	Gerente
+	1. Ingreso, actualizacion y elminacion de productos,
+	2. Ingreso, lectura, actualizacion y elminacion de empleados
+	3. Modificacion de las ordenes actuales, ya se si la orden ya se tiene que entreagar el tiene que dar esa orden
+
+	Administrador
+	
+	1. Ingreso, lectura, actualizacion y elminacion de las sucursales
+	2. Ingreso, actualizacion y elminacion de productos,
+	3. Ingreso, lectura, actualizacion y elminacion de empleados (unicamente gerentes)
+
+Fujo de trabajo del cliente
+
+	1. Inicia sesion, si es correcto lo redirige al menu de la tienda, si no lo matiene en el login pero con una alerta.
+	2. Ingreso de ordenes, osea, que tenga un carrito donde pueda ver todos los prodcutos que ya ha seleccionado
+	
+	Cliente	
+	Panel para observar sus pedidos recientes
+	Panel para actualizar su perfil
+	

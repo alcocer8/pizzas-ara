@@ -26,12 +26,12 @@ namespace pizzitas_web.Controllers
         [ProducesResponseType (StatusCodes.Status200OK)]
         [ProducesResponseType (StatusCodes.Status400BadRequest)]
         [ProducesResponseType (StatusCodes.Status500InternalServerError)]
-        public IActionResult InsertProdcuto(Producto producto)
+        public IActionResult InsertProdcuto([FromBody] Producto producto)
         {
             try
             {
                 var saved =_productoService.InsertarProducto (producto);
-
+		Console.WriteLine("Name:" ,producto.Name);
                 if (!saved)
                     return BadRequest ("Some information is missing");
 
