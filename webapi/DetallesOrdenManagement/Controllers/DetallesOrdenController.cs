@@ -55,13 +55,20 @@ namespace DetallesOrdenManagement.Controllers
 
             return result;
         }
-
+/*
         [HttpGet]
         [ProducesResponseType (StatusCodes.Status200OK, Type = typeof (Detallesorden))]
         
         public IEnumerable<Detallesorden> GetDetallesordens()
         {
             return this._detallesOrdenService.GetDetallesordens();
+        }*/
+
+        [HttpGet]
+        [ProducesResponseType (StatusCodes.Status200OK)]
+        public dynamic GetDetallesordenDetallado()
+        {
+            return this._detallesOrdenService.OrdenDellado();
         }
 
         [HttpPost ("{idDetallesOrden}") ]

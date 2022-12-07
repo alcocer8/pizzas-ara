@@ -5,7 +5,6 @@ namespace DetallesOrdenManagement.Repository.impl
     public class DetallesOrdenRepository : IDetallesOrdenRepository
     {
         private readonly PizzitasContext _context;
-
         public DetallesOrdenRepository(PizzitasContext pizzitasContext)
         {
             this._context = pizzitasContext;
@@ -54,6 +53,24 @@ namespace DetallesOrdenManagement.Repository.impl
 
             this._context.SaveChanges();
             return true;
+        }
+
+        public dynamic OrdenDellado()
+        {
+            var ordenes = from Do in this._context.Detallesordens
+            join o in this._context.Ordens on Do.Idorden equals o.Idorden
+            join c in this._context.Clientes on o.Idcliente equals c.Idcliente
+            join p in this._context.Productos on Do.Idproducto equals p.Idproducto  
+            select new
+            {
+                idOrden = o.Idorden,
+                fullName = c.Name + " " + c.Lastname,
+                //dir = $"Colonia {c.Colonia} Calle: {c.Calle} Numero: {c.Nexterior} ",
+                producto = p.Name,
+                cantidad = Do.Quantity,
+                fecha = o.Fecha 
+            };
+            return ordenes;
         }
         
     }

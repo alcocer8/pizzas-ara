@@ -31,6 +31,8 @@ builder.Services.AddDbContext<PizzitasContext>(options =>
 
 builder.Services.AddScoped<IEmpleadoService, EmpleadoService>();
 builder.Services.AddScoped<IEmpleadoRepository, EmpleadoRepository>();
+builder.Services.AddScoped<ICargoRepository, CargoRepository>();
+
 
 var key = builder.Configuration.GetValue<string>("JwtSettings:Key");
 var keyStr = Encoding.ASCII.GetBytes (key);

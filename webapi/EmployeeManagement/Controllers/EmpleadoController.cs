@@ -35,7 +35,7 @@ namespace EmployeeManagement.Controllers
             return Ok (result);
         }
 
-        [Authorize (Roles = "Administrador")]
+        //[Authorize (Roles = "Administrador")]
         [HttpGet ("{idEmployee}")]
         [ProducesResponseType (StatusCodes.Status200OK, Type = typeof (Empleado))]
         public Empleado GetEmployee(int idEmployee)

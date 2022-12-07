@@ -1,10 +1,10 @@
-using Microsoft.Extensions.Options;
+using System;
 using EmployeeManagement.Models.entities;
 using EmployeeManagement.Repositories;
-using EmployeeManagement.Models.JWT;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using Microsoft.Extensions.Options;
 
 
 namespace EmployeeManagement.Services.implementation
@@ -12,11 +12,12 @@ namespace EmployeeManagement.Services.implementation
     public class EmpleadoService : IEmpleadoService
     {
         private readonly IEmpleadoRepository _empleadoRepository;
-        //private readonly ICargoRepository _cargoRepository;
+        private readonly ICargoRepository _cargoRepository;
         private readonly IConfiguration _configuration;
-        public EmpleadoService(IEmpleadoRepository empleadoRepository, IConfiguration configuration)
+        public EmpleadoService(IEmpleadoRepository empleadoRepository, ICargoRepository cargoRepository, IConfiguration configuration)
         {
             this._empleadoRepository = empleadoRepository;
+            this._cargoRepository = cargoRepository;
             this._configuration = configuration;
         }
 
@@ -25,6 +26,8 @@ namespace EmployeeManagement.Services.implementation
             var empleado = this._empleadoRepository.GetEmpleados().SingleOrDefault(e => e.Username == username && e.Pass == this.CalculateHash(password));
             if (empleado == null) return empleado!;
 
+            var cargo = this._cargoRepository.GetCargos().First(c => c.Idcargo == empleado.Idcargo);
+            if(cargo == null) return empleado!;
 
             var tokenHandler = new JwtSecurityTokenHandler();
             var strKey = this._configuration.GetValue<string>("JwtSettings:Key");
@@ -36,7 +39,7 @@ namespace EmployeeManagement.Services.implementation
                     new Claim[] {
                         new Claim ("UserName", empleado.Username!),
                         new Claim ($"First Name", empleado.Name!),
-                        new Claim(ClaimTypes.Role, "Administrador")
+                        new Claim(ClaimTypes.Role, cargo.Name!)
                     }
                 ),
                 Expires = DateTime.Now.AddHours(1),

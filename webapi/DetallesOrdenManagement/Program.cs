@@ -18,6 +18,10 @@ builder.Services.AddDbContext<PizzitasContext>( options => {
 builder.Services.AddScoped<IDetallesOrdenRepository, DetallesOrdenRepository>();
 builder.Services.AddScoped<IDetallesOrdenService, DetallesOrdenService>();
 
+builder.Services.AddScoped<IOrdenRepository, OrdenRepository>();
+builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
+
+
 // Add services to the container.
 
 builder.Services.AddControllers();

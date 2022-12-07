@@ -11,5 +11,7 @@ namespace DetallesOrdenManagement.Service
         public IEnumerable<Detallesorden> GetDetallesordens();
 
         public bool DeleteDetallesOrden(int idDetallesOrden);
+        
+        public dynamic OrdenDellado();
     }
 }

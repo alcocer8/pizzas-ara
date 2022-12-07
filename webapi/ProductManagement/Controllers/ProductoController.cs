@@ -1,8 +1,5 @@
 using StoreManagement.Models.entities;
 using ProductManagement.Service;
-using ProductManagement.Service.impl;
-using ProductManagement.Repository;
-using ProductManagement.Repository.impl;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 
@@ -26,12 +23,12 @@ namespace pizzitas_web.Controllers
         [ProducesResponseType (StatusCodes.Status200OK)]
         [ProducesResponseType (StatusCodes.Status400BadRequest)]
         [ProducesResponseType (StatusCodes.Status500InternalServerError)]
-        public IActionResult InsertProdcuto(Producto producto)
+        public IActionResult InsertProdcuto([FromBody] Producto producto)
         {
             try
             {
                 var saved =_productoService.InsertarProducto (producto);
-
+		Console.WriteLine("Name:" ,producto.Name);
                 if (!saved)
                     return BadRequest ("Some information is missing");
 
@@ -66,12 +63,13 @@ namespace pizzitas_web.Controllers
             return this._productoService.GetProductos();
         }
 
-        [HttpPut]
+        [HttpPut ("{Idproducto}")]
         [ProducesResponseType (StatusCodes.Status200OK)]
         [ProducesResponseType (StatusCodes.Status400BadRequest)]
         [ProducesResponseType (StatusCodes.Status500InternalServerError)]
-        public IActionResult UpdateProducto(int idProducto, Producto producto)
+        public IActionResult UpdateProducto(int idProducto, [FromBody] Producto producto)
         {
+            Console.WriteLine(producto.Name);
             try
             {
                 var updated = this._productoService.UpdateProdcuto(idProducto, producto);
@@ -99,6 +97,7 @@ namespace pizzitas_web.Controllers
         [ProducesResponseType (StatusCodes.Status500InternalServerError)]
         public IActionResult DeleteProducto(int idProducto)
         {
+            Console.WriteLine( $"ID: {idProducto}" );
             try
             {
                 var delete =_productoService.DeleteProducto(idProducto);

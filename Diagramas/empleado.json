@@ -1,0 +1,14 @@
+{
+    "Panel de ordenens": {
+        "idOrden": "",
+        "Nombre del cliente": "",
+        "prodcuto": "",
+        "cantidad": "",
+        "fecha de pedido": "",
+        "Estado del pedido": ""
+    },
+    "Login": {
+        "usuario": "",
+        "password": ""
+    }
+}
