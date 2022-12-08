@@ -60,7 +60,8 @@ namespace DetallesOrdenManagement.Repository.impl
             var ordenes = from Do in this._context.Detallesordens
             join o in this._context.Ordens on Do.Idorden equals o.Idorden
             join c in this._context.Clientes on o.Idcliente equals c.Idcliente
-            join p in this._context.Productos on Do.Idproducto equals p.Idproducto  
+            join p in this._context.Productos on Do.Idproducto equals p.Idproducto
+            join Co in this._context.Condicions on o.Idcondicion equals Co.Idcondicion
             select new
             {
                 idOrden = o.Idorden,
@@ -68,7 +69,8 @@ namespace DetallesOrdenManagement.Repository.impl
                 //dir = $"Colonia {c.Colonia} Calle: {c.Calle} Numero: {c.Nexterior} ",
                 producto = p.Name,
                 cantidad = Do.Quantity,
-                fecha = o.Fecha 
+                fecha = o.Fecha,
+                estado = Co.Name
             };
             return ordenes;
         }

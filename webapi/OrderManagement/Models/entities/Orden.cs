@@ -11,7 +11,7 @@ public partial class Orden
 
     public int? Idsucursal { get; set; }
 
-    public int? Idcondicion { get; set; }
+    public int Idcondicion { get; set; }
 
     public DateTime? Fecha { get; set; }
 

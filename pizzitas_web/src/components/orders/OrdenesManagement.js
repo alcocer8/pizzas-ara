@@ -23,14 +23,12 @@ class OrdenesManagement extends React.Component {
     this.handle_change = this.handle_change.bind(this);
 
     this.BASEPATH = process.env.REACT_APP_END_POINT_DETALLES_ORDEN;
-    this.GET_ALL =
-      process.env.REACT_APP_END_POINT_DETALLES_ORDEN_ALL;
+    this.GET_ALL = process.env.REACT_APP_END_POINT_DETALLES_ORDEN_ALL;
   }
 
   componentDidMount() {
-    let url =
-      this.BASEPATH + this.GET_ALL;
-
+    let url = this.BASEPATH + this.GET_ALL;
+    console.log(url);
     axios
       .get(url, {
         headers: {
@@ -87,8 +85,34 @@ class OrdenesManagement extends React.Component {
     });
   };
 
-  render() {
+  onChangeEstado = (e) => {
+    let data = {
+      idOrden: e.target.parentElement.parentElement.id,
+      idCondicion: e.target.value,
+    };
+    let url =
+      process.env.REACT_APP_END_POINT_ORDEN +
+      process.env.REACT_APP_END_POINT_ORDEN_ALL;
 
+    axios
+      .put(url, JSON.stringify(data), {
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + this.state.token,
+        },
+      })
+      .then((response) => {
+        if (response.status === 200) {
+          console.log("paso");
+          console.log(response);
+          return;
+        }
+      })
+      .catch((reason) => {});
+  };
+
+  render() {
     if (this.state.token === "" || this.state.token === null) {
       return (
         <Navigate to="/login" state={{ from: this.props.location.pathname }} />
@@ -131,21 +155,31 @@ class OrdenesManagement extends React.Component {
           <thead>
             <tr>
               <th>ID Order</th>
-              <th>Description</th>
-              <th>Precio</th>
-              <th>Quantity</th>
+              <th>fullName</th>
+              <th>producto</th>
+              <th>cantidad</th>
+              <th>fecha</th>
+              <th>Estado</th>
               <th colSpan="2">Actions</th>
             </tr>
           </thead>
           <tbody>
             {this.state.items.map((item) => (
-              <tr key={item.idproducto}>
-                <td>{item.name}</td>
-                <td>{item.descripcion}</td>
-                <td>{item.precio}</td>
-                <td>{item.quantity}</td>
+              <tr key={item.idOrden} id={item.idOrden}>
+                <td>{item.idOrden}</td>
+                <td>{item.fullName}</td>
+                <td>{item.producto}</td>
+                <td>{item.cantidad}</td>
+                <td>{item.fecha}</td>
+                <td>{item.estado}</td>
                 <td>
-                  <Link to={`/edit/producto/${item.idproducto}`}>Edit</Link>
+                  {/* <Link to={`/edit/producto/${item.idproducto}`}>Edit</Link> */}
+                  <select onChange={this.onChangeEstado}>
+                    <option value="1">Pendiente</option>
+                    <option value="2">En Preparacion</option>
+                    <option value="3">Enviado</option>
+                    <option value="4">Entregado</option>
+                  </select>
                 </td>
                 <td>Delete</td>
               </tr>

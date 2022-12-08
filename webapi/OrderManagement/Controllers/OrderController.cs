@@ -70,11 +70,12 @@ namespace OrderManagement.Controllers
         [ProducesResponseType (StatusCodes.Status200OK)]
         [ProducesResponseType (StatusCodes.Status400BadRequest)]
         [ProducesResponseType (StatusCodes.Status500InternalServerError)]
-        public IActionResult UpdateOrden(int idOrden, int idCondicion)
+        public IActionResult UpdateOrden([FromBody] OrdenGet values)
         {
+            Console.WriteLine($" IdOrden: {values.idOrden}, IdCondicion: {values.idCondicion} ");
             try
             {
-                var updated = this._orderService.UpdateOrden(idOrden, idCondicion);
+                var updated = this._orderService.UpdateOrden(values.idOrden, values.idCondicion);
 
                 if (!updated)
                     return BadRequest ("Some information is wrong!");
@@ -85,7 +86,7 @@ namespace OrderManagement.Controllers
             {
                 _logger.LogError($"An error was raised in {nameof (OrderController)}.{nameof (UpdateOrden)} method. " +
                     $"Error message {ex.Message}",
-                    new object[] { $"idOrden={idOrden}", $"Payload={JsonSerializer.Serialize(new Orden())}" });
+                    new object[] { $"idOrden={values.idOrden}", $"Payload={JsonSerializer.Serialize(new Orden())}" });
 
                 throw;
             }
