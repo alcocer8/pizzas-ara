@@ -29,7 +29,7 @@ class ProductoManagement extends React.Component {
   componentDidMount() {
     let url = this.BASEPATH + this.GET_ALL;
 
-    console.log(url);
+    (url);
     axios
       .get(url, {
         headers: {

@@ -3,7 +3,7 @@ import axios from "axios";
 import { Button, Table } from "reactstrap";
 //import "./employeesManagement.css";
 
-import { Link, Navigate, useLocation } from "react-router-dom";
+import { Link, Navigate, redirect, useLocation } from "react-router-dom";
 
 import { Alert, Container } from "reactstrap";
 
@@ -28,7 +28,7 @@ class OrdenesManagement extends React.Component {
 
   componentDidMount() {
     let url = this.BASEPATH + this.GET_ALL;
-    console.log(url);
+    (url);
     axios
       .get(url, {
         headers: {
@@ -54,7 +54,7 @@ class OrdenesManagement extends React.Component {
   }
 
   handle_change(e) {
-    console.log(e.target.checked);
+    (e.target.checked);
 
     this.setState({
       result: e.target.checked,
@@ -104,8 +104,8 @@ class OrdenesManagement extends React.Component {
       })
       .then((response) => {
         if (response.status === 200) {
-          console.log("paso");
-          console.log(response);
+          let text = e.target.options[e.target.selectedIndex].text;
+          document.querySelector("#estado").innerHTML=text;
           return;
         }
       })
@@ -171,17 +171,16 @@ class OrdenesManagement extends React.Component {
                 <td>{item.producto}</td>
                 <td>{item.cantidad}</td>
                 <td>{item.fecha}</td>
-                <td>{item.estado}</td>
+                <td id="estado" >{item.estado}</td>
                 <td>
-                  {/* <Link to={`/edit/producto/${item.idproducto}`}>Edit</Link> */}
                   <select onChange={this.onChangeEstado}>
+                  <option value="0" selected="true" disabled >-- Seleccion --</option>
                     <option value="1">Pendiente</option>
                     <option value="2">En Preparacion</option>
                     <option value="3">Enviado</option>
                     <option value="4">Entregado</option>
                   </select>
                 </td>
-                <td>Delete</td>
               </tr>
             ))}
           </tbody>

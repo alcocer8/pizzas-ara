@@ -23,12 +23,12 @@ class EmployeesManagement extends React.Component {
         
         this.handle_change = this.handle_change.bind (this);
 
-        this.EMPLOYEES_ENDPOINT_BASEPATH = process.env.REACT_APP_EMPLOYEES_ENDPOINT_BASEPATH;
-        this.EMPLOYEES_ENDPOINT_GET_ALL = process.env.REACT_APP_EMPLOYEES_ENDPOINT_GET_ALL;
+        this.BASEPATH = process.env.REACT_APP_END_POINT_EMPLEADOS;
+        this.GET_ALL = process.env.REACT_APP_END_POINT_EMPLEADOS_ALL;
     }
 
     componentDidMount () {
-        let url = this.EMPLOYEES_ENDPOINT_BASEPATH + this.EMPLOYEES_ENDPOINT_GET_ALL;
+        let url = this.BASEPATH + this.GET_ALL;
 
         axios.get (url, {
             headers: {
@@ -51,7 +51,7 @@ class EmployeesManagement extends React.Component {
     }
 
     handle_change (e) {
-        console.log(e.target.checked);
+        (e.target.checked);
 
         this.setState ({
             result: e.target.checked
@@ -128,17 +128,20 @@ class EmployeesManagement extends React.Component {
                         <tr>
                             <th>First Name</th>
                             <th>Last Name</th>
+                            <th>Ceuluar</th>
+                            <th>Username</th>
                             <th colSpan='2'>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
                             this.state.items.map (item => 
-                                <tr key={item.empNo}>
-                                    <td>{item.firstName}</td>
-                                    <td>{item.lastName}</td>
-                                    <td><Link to={`/edit/${item.empNo}`}>Edit</Link></td>
-                                    <td>Delete</td>
+                                <tr key={item.idempleado}>
+                                    <td>{item.name}</td>
+                                    <td>{item.lastname}</td>
+                                    <td>{item.celular}</td>
+                                    <td>{item.username}</td>
+                                    <td><Link to={`/edit/${item.idempleado}`}>Edit</Link></td>
                                 </tr>
                             )
                         }

@@ -93,7 +93,7 @@ function EditProducto(props) {
         },
       })
       .then((response) => {
-        console.log(response)
+        (response)
         if (response.status === 200) {
           updateState({
             isSubmitted: true,
@@ -117,7 +117,7 @@ function EditProducto(props) {
   function deleteProducto(e) {
     let url = editEndpoint + editTemplate + "/" + params.id;
 
-    console.log(url);
+    (url);
     axios
       .post(url, {
         headers: {

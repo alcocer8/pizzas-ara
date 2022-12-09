@@ -20,18 +20,18 @@ function EditEmployee (props) {
     const navigate = useNavigate ();
     const params = useParams ();
 
-    const [fields, updateFields] = useState (
+    const [fields, uptextFields] = useState (
         {
-            empNo: '',
-            firstName: '',
-            lastName: '',
-            gender: '',
-            birthDate: '',
-            hireDate: ''
+            idempleado: '',
+            name: '',
+            lastname: '',
+            celular: '',
+            username: '',
+            password: ''
         }
     );
     
-    const [state, updateState] = useState (
+    const [state, uptextState] = useState (
         {
             token: props.token,
             isSubmitted: false,
@@ -39,8 +39,8 @@ function EditEmployee (props) {
         }
     );
 
-    const editEndpoint = process.env.REACT_APP_EMPLOYEES_ENDPOINT_BASEPATH;
-    const editTemplate = process.env.REACT_APP_EMPLOYEES_ENDPOINT_GET_ALL; 
+    const editEndpoint = process.env.REACT_APP_END_POINT_EMPLEADOS;
+    const editTemplate = process.env.REACT_APP_END_POINT_EMPLEADOS_ALL; 
 
     useEffect (() => {
         
@@ -55,17 +55,18 @@ function EditEmployee (props) {
         })
         .then (response => {
             if (response.status === 200) {
-                updateFields (
+                uptextFields (
                     {
-                        empNo: response.data.empNo,
-                        firstName: response.data.firstName,
-                        lastName: response.data.lastName,
-                        birthDate: response.data.birthDate.substr (0, 10),
-                        hireDate: response.data.hireDate.substr (0, 10)
+                        idempleado: params.id,
+                        name: response.data.name,
+                        lastname: response.data.lastname,
+                        celular: response.data.celular,
+                        username: response.data.username,
+                        password: response.data.pass
                     }
                 )
             } else {
-                updateState (
+                uptextState (
                     {
                         error: true
                     }
@@ -77,7 +78,7 @@ function EditEmployee (props) {
     }, [params, editEndpoint, editTemplate, props.token]);
     
     function handleChange (e) {
-        updateFields (
+        uptextFields (
             {
                 ...fields,
                 [e.target.name]: e.target.value
@@ -89,11 +90,12 @@ function EditEmployee (props) {
         let url = editEndpoint + editTemplate + "/" + params.id
 
         let data = {
-            firstName: fields.firstName,
-            lastName: fields.lastName,
-            gender: 'F',
-            birthDate: fields.birthDate,
-            hireDate: fields.hireDate
+            idempelado: params.id,
+            name: fields.name,
+            lastname: fields.lastname,
+            celular: fields.celular,
+            username: fields.username,
+            pass: fields.password
         }
         
         axios.put (url, JSON.stringify (data), {
@@ -105,7 +107,7 @@ function EditEmployee (props) {
         })
         .then (response => {
             if (response.status === 200) {
-                updateState (
+                uptextState (
                     {
                         isSubmitted: true
                     }
@@ -114,13 +116,49 @@ function EditEmployee (props) {
                 return;
             }
 
-            updateState (
+            uptextState (
                 {
                     error: true,
                 }
             );
         }).catch (reason => {
-            updateState ({
+            uptextState ({
+                error: true
+            })
+        })
+    }
+
+    function deleteEmployee(e){
+        e.preventDefault();
+        let url = editEndpoint + editTemplate + "/" + params.id
+
+        (url)
+
+        axios.delete(url, {
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + state.token
+            }
+        })
+        .then (response => {
+            if (response.status === 200) {
+                uptextState (
+                    {
+                        isSubmitted: true
+                    }
+                );
+                cancel();
+                return;
+            }
+
+            uptextState (
+                {
+                    error: true,
+                }
+            );
+        }).catch (reason => {
+            uptextState ({
                 error: true
             })
         })
@@ -143,34 +181,40 @@ function EditEmployee (props) {
                 <Alert 
                     isOpen={state.isSubmitted} 
                     color={!state.error ? "success" : "warning"}
-                    toggle={() => updateState ({ isSubmitted: false })}
+                    toggle={() => uptextState ({ isSubmitted: false })}
                 >
-                    {!state.error ? "Information was saved!" : "An error occurs while trying to update information"}
+                    {!state.error ? "Information was saved!" : "An error occurs while trying to uptext information"}
                 </Alert>
                 <Form className="form">
                     <Col>
                         <FormGroup row>
-                            <Label for="name" sm={2}>First Name</Label>
+                            <Label for="name" sm={2}>Name</Label>
                             <Col sm={2}>
-                                <Input type="text" name="firstName" onChange={handleChange} value={fields.firstName} />
+                                <Input type="text" name="name" onChange={handleChange} value={fields.name} />
                             </Col>
                         </FormGroup>
                         <FormGroup row>
                             <Label for="name" sm={2}>Last Name</Label>
                             <Col sm={2}>
-                                <Input type="text" name="lastName" onChange={handleChange} value={fields.lastName} />
+                                <Input type="text" name="lastname" onChange={handleChange} value={fields.lastname} />
                             </Col>
                         </FormGroup>
                         <FormGroup row>
-                            <Label for="name" sm={2}>Birth Date</Label>
+                            <Label for="name" sm={2}>Celular</Label>
                             <Col sm={2}>
-                                <Input bsSize="md" type="date" name="birthDate" value={fields.birthDate} onChange={handleChange} />
+                                <Input bsSize="md" type="text" name="celular" value={fields.celular} onChange={handleChange} />
                             </Col>
                         </FormGroup>
                         <FormGroup row>
-                            <Label for="name" sm={2}>Hire Date</Label>
+                            <Label for="name" sm={2}>Username</Label>
                             <Col sm={2}>
-                                <Input bsSize="md" type="date" name="hireDate" onChange={handleChange} value={fields.hireDate} />
+                                <Input bsSize="md" type="text" name="username" onChange={handleChange} value={fields.username} />
+                            </Col>
+                        </FormGroup>
+                        <FormGroup row>
+                            <Label for="name" sm={2}>password</Label>
+                            <Col sm={2}>
+                                <Input bsSize="md" type="password" name="password" onChange={handleChange} value={fields.password} />
                             </Col>
                         </FormGroup>
                     </Col>
@@ -183,6 +227,9 @@ function EditEmployee (props) {
                             </Col>
                             <Col sm={1}>
                                 <Button color="secondary" onClick={cancel} >Cancel</Button>
+                            </Col>
+                            <Col sm={1}>
+                                <Button color="error" onClick={deleteEmployee} >Eliminar</Button>
                             </Col>
                             <Col sm={5}>
                             </Col>

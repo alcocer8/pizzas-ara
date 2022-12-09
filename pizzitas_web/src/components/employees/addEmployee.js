@@ -2,174 +2,220 @@ import { useState } from "react";
 import { Navigate, useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-import { 
-    Col,
-    Form,
-    FormGroup,
-    Button,
-    Input,
-    Label,
-    Container,
-    Alert
+import {
+  Col,
+  Form,
+  FormGroup,
+  Button,
+  Input,
+  Label,
+  Container,
+  Alert,
 } from "reactstrap";
 
-const AddEmployee = ({token}) => {
-    const location = useLocation ();
-    const navigate = useNavigate ();
-    
-    const [fields, updateFields] = useState (
-        {
-            empNo: '',
-            firstName: '',
-            lastName: '',
-            gender: '',
-            birthDate: '',
-            hireDate: ''
+const AddEmployee = ({ token }) => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const [fields, uptextFields] = useState({
+    idempleado: "",
+    name: "",
+    lastname: "",
+    celular: "",
+    username: "",
+    password: "",
+    cargo: 0,
+  });
+
+  const [state, uptextState] = useState({
+    token: token,
+    isSubmitted: false,
+    error: false,
+  });
+
+  const editEndpoint = process.env.REACT_APP_END_POINT_EMPLEADOS;
+  const editTemplate = process.env.REACT_APP_END_POINT_EMPLEADOS_ALL;
+
+  function add(e) {
+    let url = editEndpoint + editTemplate;
+
+    let data = {
+      idempleado: 0,
+      name: fields.name,
+      lastname: fields.lastname,
+      username: fields.username,
+      celular: fields.celular,
+      pass: fields.password,
+      cargo: fields.cargo,
+    };
+
+    axios
+      .post(url, JSON.stringify(data), {
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + state.token,
+        },
+      })
+      .then((response) => {
+        if (response.status === 200) {
+          uptextState({
+            isSubmitted: true,
+          });
+
+          return;
         }
-    );
 
-    const [state, updateState] = useState (
-        {
-            token: token,
-            isSubmitted: false,
-            error: false
-        }
-    );
+        uptextState({
+          error: true,
+          isSubmitted: false,
+        });
+      })
+      .catch((reason) => {
+        uptextState({
+          error: true,
+        });
+      });
+  }
 
-    const editEndpoint = process.env.REACT_APP_EMPLOYEES_ENDPOINT_BASEPATH;
-    const editTemplate = process.env.REACT_APP_EMPLOYEES_ENDPOINT_GET_ALL; 
+  function cancel(e) {
+    navigate("/employeesManagement");
+  }
 
-    function add (e) {
-        let url = editEndpoint + editTemplate;
+  function handleChange(e) {
+    uptextFields({
+      ...fields,
+      [e.target.name]: e.target.value,
+    });
+  }
 
-        let data = {
-            empNo: fields.empNo,
-            firstName: fields.firstName,
-            lastName: fields.lastName,
-            birthDate: fields.birthDate,
-            gender: fields.gender,
-            hireDate: fields.hireDate,
-        }
-
-        axios.post (url, JSON.stringify (data), {
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                'Authorization': 'Bearer ' + state.token
-            }
-        })
-        .then (response => {
-            if (response.status === 200) {
-                updateState (
-                    {
-                        isSubmitted: true
-                    }
-                );
-
-                return;
-            }
-
-            updateState (
-                {
-                    error: true,
-                    isSubmitted: false
-                }
-            );
-        }).catch (reason => {
-            updateState (
-                {
-                    error: true
-                }
-            )
-        })
+  function handleCargo(e){
+    let cargo = e.target.value;
+    if(!cargo){
+        return
     }
+    fields.cargo = cargo
+  }
 
-    function cancel (e) {
-        navigate ('/employeesManagement');
-    }
+  if (token === "") {
+    return <Navigate to="/login" state={{ from: location.pathname }} />;
+  }
 
-    function handleChange (e) {
-        updateFields (
-            {
-                ...fields,
-                [e.target.name]: e.target.value
-            }
-        );
-    }
-
-    if (token === '') {
-        return (
-            <Navigate to = '/login' state = {{from: location.pathname}} />
-        );
-    }
-
-    return (
-        <Container className="App">
-                <h4 className="PageHeading">Enter employee infomation</h4>
-                <Alert 
-                    isOpen={state.isSubmitted} 
-                    color={!state.error ? "success" : "warning"}
-                    toggle={() => updateState ({ isSubmitted: false })}
-                >
-                    {!state.error ? "Information was saved!" : "An error occurs while trying to update information"}
-                </Alert>
-                <Form className="form">
-                    <Col>
-                        <FormGroup row>
-                            <Label for="name" sm={2}>Employee No.</Label>
-                            <Col sm={2}>
-                                <Input type="text" name="empNo" onChange={handleChange} value={fields.empNo} />
-                            </Col>
-                        </FormGroup>
-                        <FormGroup row>
-                            <Label for="name" sm={2}>First Name</Label>
-                            <Col sm={2}>
-                                <Input type="text" name="firstName" onChange={handleChange} value={fields.firstName} />
-                            </Col>
-                        </FormGroup>
-                        <FormGroup row>
-                            <Label for="name" sm={2}>Last Name</Label>
-                            <Col sm={2}>
-                                <Input type="text" name="lastName" onChange={handleChange} value={fields.lastName} />
-                            </Col>
-                        </FormGroup>
-                        <FormGroup row>
-                            <Label for="name" sm={2}>Gender</Label>
-                            <Col sm={2}>
-                                <Input bsSize="md" type="text" name="gender" value={fields.gender} onChange={handleChange} />
-                            </Col>
-                        </FormGroup>
-                        <FormGroup row>
-                            <Label for="name" sm={2}>Birth Date</Label>
-                            <Col sm={2}>
-                                <Input bsSize="md" type="date" name="birthDate" value={fields.birthDate} onChange={handleChange} />
-                            </Col>
-                        </FormGroup>
-                        <FormGroup row>
-                            <Label for="name" sm={2}>Hire Date</Label>
-                            <Col sm={2}>
-                                <Input bsSize="md" type="date" name="hireDate" onChange={handleChange} value={fields.hireDate} />
-                            </Col>
-                        </FormGroup>
-                    </Col>
-                    <Col>
-                        <FormGroup row>
-                            <Col sm={5}>
-                            </Col>
-                            <Col sm={1}>
-                                <Button color="primary" onClick={add}>Submit</Button>
-                            </Col>
-                            <Col sm={1}>
-                                <Button color="secondary" onClick={cancel} >Cancel</Button>
-                            </Col>
-                            <Col sm={5}>
-                            </Col>
-                        </FormGroup>
-                    </Col>
-                </Form>
-            </Container>
-    );
-
-}
+  return (
+    <Container className="App">
+      <h4 className="PageHeading">Enter employee infomation</h4>
+      <Alert
+        isOpen={state.isSubmitted}
+        color={!state.error ? "success" : "warning"}
+        toggle={() => uptextState({ isSubmitted: false })}
+      >
+        {!state.error
+          ? "Information was saved!"
+          : "An error occurs while trying to uptext information"}
+      </Alert>
+      <Form className="form">
+        <Col>
+          <FormGroup row>
+            <Label for="name" sm={2}>
+              Nombre
+            </Label>
+            <Col sm={2}>
+              <Input
+                type="text"
+                name="name"
+                onChange={handleChange}
+                value={fields.name}
+              />
+            </Col>
+          </FormGroup>
+          <FormGroup row>
+            <Label for="name" sm={2}>
+              Apellido
+            </Label>
+            <Col sm={2}>
+              <Input
+                type="text"
+                name="lastname"
+                onChange={handleChange}
+                value={fields.lastname}
+              />
+            </Col>
+          </FormGroup>
+          <FormGroup row>
+            <Label for="name" sm={2}>
+              celular
+            </Label>
+            <Col sm={2}>
+              <Input
+                bsSize="md"
+                type="text"
+                name="celular"
+                value={fields.celular}
+                onChange={handleChange}
+              />
+            </Col>
+          </FormGroup>
+          <FormGroup row>
+            <Label for="name" sm={2}>
+              Username
+            </Label>
+            <Col sm={2}>
+              <Input
+                bsSize="md"
+                type="text"
+                name="username"
+                value={fields.username}
+                onChange={handleChange}
+              />
+            </Col>
+          </FormGroup>
+          <FormGroup row>
+            <Label for="name" sm={2}>
+              Password
+            </Label>
+            <Col sm={2}>
+              <Input
+                bsSize="md"
+                type="password"
+                name="password"
+                onChange={handleChange}
+                value={fields.password}
+              />
+            </Col>
+          </FormGroup>
+          <FormGroup row>
+            <Label for="cargo" sm={2}>
+              Cargo
+            </Label>
+            <Col sm={2}>
+              <select onChange={(e) => handleCargo(e)} >
+                <option value="0" disabled >-- Selecionar --</option>
+                <option value="2">Gerente</option>
+                <option value="3">Cocinero</option>
+                <option value="4">Repartidor</option>
+              </select>
+            </Col>
+          </FormGroup>
+        </Col>
+        <Col>
+          <FormGroup row>
+            <Col sm={5}></Col>
+            <Col sm={1}>
+              <Button color="primary" onClick={add}>
+                Submit
+              </Button>
+            </Col>
+            <Col sm={1}>
+              <Button color="secondary" onClick={cancel}>
+                Cancel
+              </Button>
+            </Col>
+            <Col sm={5}></Col>
+          </FormGroup>
+        </Col>
+      </Form>
+    </Container>
+  );
+};
 
 export default AddEmployee;

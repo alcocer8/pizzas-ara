@@ -41,7 +41,6 @@ function MyApp(props) {
   function onActive(e) {}
 
   function onIdle(e) {
-    console.log("User is idle");
     logout();
   }
 

@@ -36,7 +36,7 @@ const Login = ({setToken}) => {
 			password: estado.Password
 		};
 
-		console.log(endpoint)
+		(endpoint)
 		axios.post (endpoint, payload,
 		{
 			headers: {
@@ -46,7 +46,7 @@ const Login = ({setToken}) => {
 			(response) => {
 				if (response.status === 200) {
 					const json = response.data;
-					console.log(response)
+					(response)
 					if (json.token === '') {
 						guardarEstado (prevState => {
 							return (
@@ -89,10 +89,10 @@ const Login = ({setToken}) => {
 					);
 				}
 				
-				//console.log("Exception " + error);
+				//("Exception " + error);
 			}
 		).catch (error => {
-			//console.log (error);
+			// (error);
 		});
 	}
 
