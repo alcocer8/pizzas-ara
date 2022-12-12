@@ -34,6 +34,7 @@ namespace ClientManagement.Service.impl
                     new Claim[] {
                         new Claim ("Email", cliente.Email!),
                         new Claim ($"First Name", cliente.Name!),
+                        new Claim(ClaimTypes.Role, "Cliente")
                     }
                 ),
                 Expires = DateTime.Now.AddHours(1),

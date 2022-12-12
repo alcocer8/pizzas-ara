@@ -55,20 +55,11 @@ namespace EmployeeManagement.Controllers
             return this._empleadoService.GetEmpleados();
         }
 
-        [HttpPut]
-        [ProducesResponseType (StatusCodes.Status200OK)]
-        [ProducesResponseType (StatusCodes.Status400BadRequest)]
-        [ProducesResponseType (StatusCodes.Status500InternalServerError)]
-            public bool UpdateEmployee(int idEmployee, Empleado empleado)
-        {
-            return this._empleadoService.UpdateEmpleado(idEmployee, empleado);
-        }
-
         [HttpPost]
         [ProducesResponseType (StatusCodes.Status200OK)]
         [ProducesResponseType (StatusCodes.Status400BadRequest)]
         [ProducesResponseType (StatusCodes.Status500InternalServerError)]
-        public IActionResult InsertEmployee(Empleado empleado)
+        public IActionResult InsertEmployee([FromBody] Empleado empleado)
         {
             try
             {
@@ -89,12 +80,38 @@ namespace EmployeeManagement.Controllers
             }
         }
 
-        [HttpDelete]
+        [HttpPut ("{Idempleado}")]
+        [ProducesResponseType (StatusCodes.Status200OK)]
+        [ProducesResponseType (StatusCodes.Status400BadRequest)]
+        [ProducesResponseType (StatusCodes.Status500InternalServerError)]
+        public IActionResult UpdateEmpleado(int idEmpleado, [FromBody] Empleado empleado)
+        {
+            try
+            {
+                var updated = this._empleadoService.UpdateEmpleado(idEmpleado, empleado);
+
+                if (!updated)
+                    return BadRequest ("Some information is wrong!");
+
+                return Ok ();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"An error was raised in {nameof (EmpleadoController)}.{nameof (UpdateEmpleado)} method. " +
+                    $"Error message {ex.Message}",
+                    new object[] { $"idEmpleado={idEmpleado}", $"Payload={JsonSerializer.Serialize(new Empleado())}" });
+
+                throw;
+            }
+        }
+
+        [HttpDelete ("{Idempleado}")]
         [ProducesResponseType (StatusCodes.Status200OK)]
         [ProducesResponseType (StatusCodes.Status500InternalServerError)]
-        public bool DeleteEmployee(int employeeId) 
+        public bool DeleteEmployee(int Idempleado) 
         {
-            var isDeleted = this._empleadoService.DeleteEmpleado(employeeId);
+            Console.WriteLine(Idempleado);
+            var isDeleted = this._empleadoService.DeleteEmpleado(Idempleado);
 
             return isDeleted;
         }

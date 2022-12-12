@@ -56,7 +56,8 @@ namespace EmployeeManagement.Repositories.implementation
             tmpEmpleado.Lastname = empleado.Lastname;
             tmpEmpleado.Celular = empleado.Celular;
             tmpEmpleado.Idcargo = empleado.Idcargo;
-            
+            tmpEmpleado.Pass = empleado.Pass;
+
             this._context.Empleados.Update(tmpEmpleado);
             this._context.SaveChanges();
             return true;
