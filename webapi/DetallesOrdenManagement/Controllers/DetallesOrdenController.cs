@@ -23,10 +23,11 @@ namespace DetallesOrdenManagement.Controllers
         [ProducesResponseType (StatusCodes.Status200OK)]
         [ProducesResponseType (StatusCodes.Status400BadRequest)]
         [ProducesResponseType (StatusCodes.Status500InternalServerError)]
-        public IActionResult InsertDetallesOrden(Detallesorden detallesOrden)
+        public IActionResult InsertDetallesOrden([FromBody]  Detallesorden detallesOrden)
         {
             try
             {
+                Console.WriteLine($"{detallesOrden.Idorden}, {detallesOrden.Quantity}");
                 var saved = this._detallesOrdenService.InsertDetallesOrden(detallesOrden);
 
                 if (!saved)

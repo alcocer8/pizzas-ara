@@ -1,20 +1,19 @@
-
-/*----------Hola-----------*/
-
-.App-header {
-  background-color: #ffffff;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App {
+  text-align: center;
 }
 
-section {
-  color: #dc3545;
-  background: white;
-  height: 100vh;  
+.navheader {
+  color: black !important;
+  background-color: #b8bfcf!important;
 }
 
+h1 {
+	text-align: center;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
