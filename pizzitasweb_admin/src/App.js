@@ -3,7 +3,7 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 //Importamos los components creados
 import NavBarExample from './components/layouts/navbar';
 import Home from './components/Home';
-import EmployeesManagement from './components/employees/EmployeesManagement';
+import Login from './components/employees/Login';
 import ProductsManagement from './components/products/ProductsManagement';
 import OrdersManagement from './components/OrdersManagement';
 import Employees from './components/employees/Employees';
@@ -20,7 +20,7 @@ function App() {
     <Routes>
       <Route path='/' element={ <NavBarExample /> }>
         <Route index element={ <Home /> } />
-        <Route path='employeesmanagement' element={ <EmployeesManagement/> } />
+        <Route path='employeesmanagement' element={ <Login/> } />
         <Route path='productsmanagement' element={ <ProductsManagement/> } />
         <Route path='ordersmanagement' element={ <OrdersManagement/> } />
         <Route path='employees' element={ <Employees/> } />
