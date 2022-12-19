@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import Footer from './footer/Footer';
-import './css/inicio.css'
+import Footer from '../footer/Footer';
+import '../css/inicio.css'
 import { FormGroup } from 'react-bootstrap';
 import Badge from 'react-bootstrap/Badge';
 
