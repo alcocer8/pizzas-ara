@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
+var configuration = builder.Configuration;
+configuration.AddEnvironmentVariables();
 
 builder.Services.AddDbContext<PizzitasContext>( options => {
     options.UseNpgsql(builder.Configuration.GetConnectionString("PizzitasDBConnection"));
