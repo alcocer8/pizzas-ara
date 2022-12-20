@@ -18,7 +18,6 @@ public partial class Empleado
 
     public string? Pass { get; set; }
 
-    [JsonIgnore]
     public int? Idcargo { get; set; }
 
     [JsonIgnore]
