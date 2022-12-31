@@ -10,6 +10,9 @@ defaults:
   run:
     working-directory: ./webapi/
 
+env:
+  DOTNET-ROOT: /home/runner/.dotnet
+
 jobs:
   build:
 
