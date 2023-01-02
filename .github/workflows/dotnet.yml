@@ -6,10 +6,6 @@ on:
   pull_request:
     branches: [ "new-feature" ]
 
-defaults:
-  run:
-    working-directory: webapi/
-
 jobs:
   build:
 
@@ -24,7 +20,7 @@ jobs:
     - name: Print current directory
       run: pwd
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore /home/runner/work/pizzas-ara/pizzas-ara/webapi
     - name: Build
       run: dotnet build --no-restore
     - name: Test
