@@ -1,49 +1,40 @@
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 
-import React from 'react';
-import { useLocation } from 'react-router-dom';
-// import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import { Alert, Container } from 'react-bootstrap';
 
 
-class EmployeesManagement extends React.Component {
-	constructor (props) {
-		super (props);
+function EmployeesManagement() {
+	
+	const [state, setState] = useState ({
+		items: [],
+		isFetched: false
+	});
 
-		this.state = {
-			items: [],
-			isFetched: false,
-		};
-
-		this.EMPLOYESS_ENDPOINT_BASEPATH = process.env.REACT_APP_EMPLOYEES_ENDPOINT_BASEPATH;
-		this.EMPLOYEES_ENDPOINT_GETALL = process.env.REACT_APP_EMPLOYEES_ENDPOINT_GETALL;
-	}
-
-	componentDidMount () {
-		let url = this.EMPLOYESS_ENDPOINT_BASEPATH + this.EMPLOYEES_ENDPOINT_GETALL;
+	useEffect (() => {
+		let url = process.env.REACT_APP_EMPLOYEES_ENDPOINT_BASEPATH + process.env.REACT_APP_EMPLOYEES_ENDPOINT_GETALL;
 
 		fetch (url)
 		.then ((response => response.json ()))
 		.then ((json) => {
-			this.setState ({
+			setState ({
 				items: json,
 				isFetched: true
-			});
+			})
 		})
+	});
+
+	if (!state.isFetched) {
+		return (
+			<Container>
+				<Alert color="primary">Loading...</Alert>
+			</Container>
+		);
 	}
 
-	render () {
-		if (!this.state.isFetched) {
-			return (
-				<Container>
-					<Alert color="primary">Loading...</Alert>
-				</Container>
-			);
-		}
-
-		return (
-			<div>
+	return (
+		<div>
 			<Table striped bordered hover>
 				<thead>
 				<tr>
@@ -56,13 +47,13 @@ class EmployeesManagement extends React.Component {
 				</thead>
 				<tbody>
 					{
-						this.state.items.map (item =>
+						state.items.map (item =>
 							<tr key={item.idempleado}>
 								<td>{item.name}</td>
 								<td>{item.lastname}</td>
 								<td>{item.celular}</td>
 								<td>{item.username}</td>
-								<td><a href="editemployees">Edit Employee</a></td>
+								<td><Button variant="info" href="editemployees">Edit Employee</Button></td>
 							</tr>
 						)
 					}
@@ -73,23 +64,7 @@ class EmployeesManagement extends React.Component {
 			</Button>
 		
 			</div>
-		
-		);
-
-	}
+	);
 }
 
-//other necessary hack to get around react-router v6
-//heavy hooks utlization
-function WithRouter (Component) {
-    function ComponentWithRouterProps (props) {
-        let location = useLocation ();
-        return (
-            <Component {...props}{...{location}} />
-        )
-    }
-
-    return ComponentWithRouterProps;
-}
-
-export default WithRouter (EmployeesManagement);
+export default EmployeesManagement;
