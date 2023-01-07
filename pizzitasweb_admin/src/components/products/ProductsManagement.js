@@ -1,7 +1,40 @@
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
+import { useEffect, useState } from 'react';
+
+import { Alert, Container } from 'react-bootstrap';
 
 function ProductsManagement() {
+
+    const [state, setState] = useState ({
+        products: [],
+        isFetched: false
+    });
+
+    const basePath = process.env.REACT_APP_PRODUCTS_ENDPOINT_BASEPATH;
+    const getAllEndPoint = process.env.REACT_APP_PRODUCTS_ENDPOINT_GETALL;
+
+    useEffect (() => {
+        let url = basePath + getAllEndPoint;
+
+        fetch (url)
+        .then ((response => response.json ()))
+        .then ((json) => {
+            setState ({
+                products: json,
+                isFetched: true
+            });
+        })
+    });
+
+    if (!state.isFetched) {
+		return (
+			<Container>
+				<Alert color="primary">Loading...</Alert>
+			</Container>
+		);
+	}
+
     return (
         <div>
             <Table striped bordered hover>
@@ -15,27 +48,17 @@ function ProductsManagement() {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Pizza Peperoni</td>
-                        <td>Clasica de Peperoni</td>
-                        <td>99</td>
-                        <td>1</td>
-                        <td><a href="/editproduct">Edit Product</a></td>
-                    </tr>
-                    <tr>
-                        <td>Pizza Hawaiana</td>
-                        <td>Clasica de Hawaina</td>
-                        <td>120</td>
-                        <td>4</td>
-                        <td><a href="/editproduct">Edit Product</a></td>
-                    </tr>
-                    <tr>
-                        <td>Pizza Cuatro Quesos</td>
-                        <td>Clasica de Quesos</td>
-                        <td>130</td>
-                        <td>10</td>
-                        <td><a href="/editproduct">Edit Product</a></td>
-                    </tr>
+                    {
+                        state.products.map (product => 
+                            <tr key={product.idproducto} >
+                                <td>{product.name}</td>
+                                <td>{product.descripcion}</td>
+                                <td>{product.precio}</td>
+                                <td>{product.quantity}</td>
+                                <td><Button variant="info" href="/editproduct">Edit Product</Button></td>
+                            </tr>
+                        )
+                    }
                 </tbody>
             </Table>
             <hr />
