@@ -61,11 +61,11 @@ function EditEmployees(props) {
                         <Form.Control type='password' />
                     </Form.Group>
                     <hr/>
-                        <Form.Label>Cargo <select name='status' value={fields.idcargo}>
-                            <option value_=''>Administrador</option>
-                            <option>Gerente</option>
-                            <option>Cocinero</option>
-                            <option>Repartidor</option>
+                        <Form.Label>Cargo <select name='status' value={fields.position}>
+                            <option value={1}>Administrador</option>
+                            <option value={2}>Gerente</option>
+                            <option value={3}>Cocinero</option>
+                            <option value={4}>Repartidor</option>
                         </select>
                         </Form.Label>
                         <hr/>
