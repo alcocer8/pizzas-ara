@@ -1,10 +1,36 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 
+function EditEmployees(props) {
 
-function EditEmployees() {
+    const [fields, setFields] = useState({
+        employeeID: 0,
+        employeeName: '',
+        employeeLastName: '',
+        cellphone: '',
+        username: '',
+        position: 0
+    });
+
+    useEffect(() => {
+        let url = process.env.REACT_APP_EMPLOYEES_ENDPOINT_BASEPATH + process.env.REACT_APP_EMPLOYEES_ENDPOINT_GETALL + '/2';
+
+        fetch (url)
+        .then ((response => response.json ()))
+        .then ((json) => {
+            setFields ({
+                employeeID: json.idempleado,
+                employeeName: json.name,
+                employeeLastName: json.lastname,
+                cellphone: json.celular,
+                username: json.username,
+                position: json.idcargo
+            });
+        })
+    });
+
     return (
         <div>
 
@@ -13,43 +39,43 @@ function EditEmployees() {
             <div className='d-flex justify-content-center'>
                 <Form className='rounded p-4 p-sm-3'>
                     <Form.Group as={Col}>
-                        <Form.Label>Firs Name:</Form.Label>
-                        <Form.Control type="name" />
+                        <Form.Label>First Name:</Form.Label>
+                        <Form.Control type='name' value={fields.employeeName}/>
                     </Form.Group>
                     <Form.Group as={Col}>
                         <Form.Label>Last Name:</Form.Label>
-                        <Form.Control type="text" />
+                        <Form.Control type='text' value={fields.employeeLastName} />
                     </Form.Group>
                     <Form.Group as={Col}>
                         <Form.Label>Cellphone:</Form.Label>
-                        <Form.Control type="text" />
+                        <Form.Control type='text' value={fields.cellphone} />
                     </Form.Group>
 
                     <Form.Group as={Col}>
                         <Form.Label>Username:</Form.Label>
-                        <Form.Control type="text" />
+                        <Form.Control type='text' value={fields.username} />
                     </Form.Group>
 
                     <Form.Group as={Col}>
                         <Form.Label>Password</Form.Label>
-                        <Form.Control type="password" />
+                        <Form.Control type='password' />
                     </Form.Group>
                     <hr/>
-                        <Form.Label>Cargo <select name="status">
-                            <option selected>Gerente</option>
-                            <option>Jefe</option>
-                            <option>Empleado</option>
+                        <Form.Label>Cargo <select name='status' value={fields.idcargo}>
+                            <option value_=''>Administrador</option>
+                            <option>Gerente</option>
+                            <option>Cocinero</option>
                             <option>Repartidor</option>
                         </select>
                         </Form.Label>
                         <hr/>
-                <Button variant="info" type="submit">
+                <Button variant='warning' type='submit'>
                     Update Employee
                 </Button>
-                <Button variant="danger" type="submit">
+                <Button variant='danger' type='submit'>
                     Delete
                 </Button>
-                <Button variant="warning" type="submit" href="/employees">
+                <Button variant='secondary' type='submit' href='/employees'>
                     Cancel
                 </Button>
             </Form>
@@ -59,4 +85,4 @@ function EditEmployees() {
 
     );
 }
-export default EditEmployees
+export default EditEmployees;
